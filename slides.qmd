@@ -299,7 +299,7 @@ ggsave('unemploy.png', width = 6, dpi = 600)
 
 ## Your turn!
 
-Practice using the skills you learned on a dataset of your choice. If you do not have one, use the `diamonds` dataset from the `ggplot2`
+Practice using the skills you learned on a dataset of your choice. If you do not have one, use the `diamonds` dataset from the `ggplot2` package.
 
 # Wrap-up
 

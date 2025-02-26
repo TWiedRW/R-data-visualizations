@@ -234,7 +234,7 @@ Hints
 
 - `geom_bar()` requires the argument `stat=identity` when using both x and y in the `aes()` function.
 
-- Use `?theme()` or visit (https://ggplot2.tidyverse.org/reference/theme.html)[https://ggplot2.tidyverse.org/reference/theme.html] to see available options 
+- Use `?theme()` or visit [https://ggplot2.tidyverse.org/reference/theme.html](https://ggplot2.tidyverse.org/reference/theme.html) to see available options.
 
 
 ```{r}

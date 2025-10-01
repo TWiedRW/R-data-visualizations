@@ -26,8 +26,8 @@ knitr::opts_chunk$set(fig.align = 'center')
 ::: {.column}
 
 - We are the Statistical Cross-disciplinary Collaboration & Consulting Lab (SC3L) from the UNL Department of Statistics.
-- We offer free statistical consulting services to students, faculty, and staff at UNL.
-- Workshops! Hosted from 1-2pm on Wednesdays and Thursdays.
+- We offer free statistical consulting services to students, faculty, and staff within INAR at UNL.
+- Workshops! Hosted from 2-3pm on Wednesdays and 10-11 on Thursdays.
 
 :::
 
@@ -175,7 +175,7 @@ ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = bill_depth_mm, col
 ```
 
 
-## Your turn! 
+## Your turn! {visibility="hidden"}
 
 Using the `penguins` dataset, answer the following research question?
 
@@ -183,7 +183,7 @@ Using the `penguins` dataset, answer the following research question?
 - Hint: consider the use of color and facets.
 
 
-## Solution
+## Solution {visibility="hidden"}
 
 ```{r}
 #| echo: true
@@ -202,6 +202,27 @@ ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = bill_depth_mm, col
 # Example 2
 
 ## Example 2
+
+Does mass differ between penguins species?
+
+```{r}
+ggplot(data = penguins, mapping = aes(x = body_mass_g, y = species, fill = species)) + 
+  geom_boxplot(width = 1/2) + 
+  theme_bw() + 
+  scale_y_discrete(limits = rev) +
+  scale_fill_brewer(palette = 'Set2') +
+  labs(x = 'Body Mass (g)', y = 'Species',
+       title = 'Body mass of penguin species',
+       fill = 'Species', shape = 'Species', caption = 'Source: palmerpenguins') + 
+  theme(panel.grid.major.y = element_blank())
+```
+
+
+# Example 3
+
+## Example 3
+
+Using the ggplot2::economics dataset, plot the median duration of unemployment over time.
 
 ```{r}
 #| echo: true
@@ -224,7 +245,7 @@ ggplot(data = economics, mapping = aes(x = date, y = uempmed)) +
 
 
 
-## Your turn!
+## Your turn! {visibility="hidden"}
 
 Use the `economics2000s` dataset created below from the `economics` dataset.
 Create a visualization using `geom_bar()` to plot the average unemployment rate for each year.
@@ -251,7 +272,7 @@ economics2000s <- economics %>%
 ```
 
 
-## Solution
+## Solution {visibility="hidden"}
 
 ```{r}
 #| echo: true
@@ -297,7 +318,7 @@ ggsave('unemploy.png', width = 6, dpi = 600)
 ![](unemploy.png){fig-align=center}
 
 
-## Your turn!
+## Your turn! {visibility="hidden"}
 
 Practice using the skills you learned on a dataset of your choice. If you do not have one, use the `diamonds` dataset from the `ggplot2` package.
 
